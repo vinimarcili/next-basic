@@ -1,4 +1,4 @@
-import RedirectServer from "@/app/actions"
+import RedirectServer from "@/app/redirect"
 
 const AnalyticsPage = () => {
   return (

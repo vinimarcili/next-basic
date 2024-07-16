@@ -25,7 +25,7 @@ const DashboardLayout = ({ children }: DashboardLayoutProps) => {
             </li>
             <li>
               <Link href="/dashboard/analytics" className="block py-2 px-4 rounded hover:bg-gray-700">
-                Profile
+                Analytics
               </Link>
             </li>
             <li>

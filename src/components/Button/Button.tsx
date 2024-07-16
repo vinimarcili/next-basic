@@ -1,6 +1,14 @@
-const Button = () => {
-  return <button>Click me</button>
-}
+'use client'
 
-export default Button
+import { useRouter } from 'next/navigation'
+
+export default function Button() {
+  const router = useRouter()
+
+  return (
+    <button type="button" onClick={() => router.push('/dashboard')}>
+      To Dashboard
+    </button>
+  )
+}
 

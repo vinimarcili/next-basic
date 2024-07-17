@@ -9,7 +9,7 @@ interface ProductsListProps {
   perPage?: number
 }
 
-const ProductsListNextPage = ({ perPage = 12 }: ProductsListProps) => {
+const ProductsListNextPageComponent = ({ perPage = 12 }: ProductsListProps) => {
   const [data, setData] = useState<Product[]>([])
   const [page, setPage] = useState<number>(1)
   const [hasMore, setHasMore] = useState<boolean>(true)
@@ -46,7 +46,7 @@ const ProductsListNextPage = ({ perPage = 12 }: ProductsListProps) => {
       <footer className='container mx-auto p-4 mt-8 text-center col-span-full'>
         {
           hasMore && (
-            <button disabled={loading} onClick={getData} className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}>
+            <button onClick={getData} className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}>
               {loading ? 'Loading...' : 'Load More'}
             </button>
           )
@@ -59,4 +59,4 @@ const ProductsListNextPage = ({ perPage = 12 }: ProductsListProps) => {
   )
 }
 
-export default ProductsListNextPage
+export default ProductsListNextPageComponent
